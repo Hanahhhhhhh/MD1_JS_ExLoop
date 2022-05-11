@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //let N;
+    function checkPrime(N) {
+        let i = 2;
+
+        if (N<2) {
+            return false;
+        }
+        while (i < N) {
+            if (N % i === 0) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+    checkPrime();
+
+    function print(){
+        let N = +prompt('so so nguyen to')
+        let i = 0;
+        let count = 0;
+        let s="";
+        for(i = 0;;i++)
+        {
+            if(checkPrime(i)) {
+                count++;
+                s = s + " " + i;
+            }
+            if(count == N) break;
+        }
+        console.log(s);
+       // console.log(`tong so nguyen to trong khoang nay = ${count} so`);
+
+    }
+    print();
+</script>
+</body>
+</html>

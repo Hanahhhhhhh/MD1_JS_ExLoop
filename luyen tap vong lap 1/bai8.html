@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+to <input type="text" id="a"> <br><br>
+from <input type="text" id="b"><br><br>
+<button type="submit" id="play" onclick="click()">bắt đầu</button>
+<script>
+    function click() {
+        let n = document.getElementById(a).value;
+        let m = document.getElementById(b).value;
+        let x = prompt("nhập số muốn chọn");
+
+        for (let j = 0; j <= 3; j++) {
+            for (let i = n; i <= m;) {
+                i = Math.floor(Math.random() * i) + 1;
+                if (i == x) {
+                    alert("chúc mừng bạn đã đoán đúng");
+                } else if (i > x) {
+                    alert("lớn hơn rồi");
+                    x = prompt("nhập lại đi");
+                } else if (i < x) {
+                    alert("bé hơn rồi nha");
+                    x = prompt("nhập lại đi");
+                }
+                i++;
+            }
+        }
+    }
+</script>
+</body>
+
+</body>
+</html>
